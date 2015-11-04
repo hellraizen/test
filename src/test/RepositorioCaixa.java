@@ -18,6 +18,7 @@ public class RepositorioCaixa {
 	public boolean abrirCaixa(Caixa dinheiroCaixa) {
 		if (dinheiroCaixa.getInicial() > 0 && caixa==false) {
 			caixa = true;
+			totalCaixa=dinheiroCaixa.getInicial();
 			return true;
 		}
 		return false;
@@ -32,9 +33,11 @@ public class RepositorioCaixa {
 
 	public void entradaCaixa(Caixa entradaCaixa) {
 		if(caixa){
+			totalCaixa=totalCaixa + entradaCaixa.getTotalPago();
+			entradaCaixa.setTotalPago(totalCaixa);
 			arrayCaixa.add(entradaCaixa);
 			
-			totalCaixa= totalCaixa + entradaCaixa.getEntrada().getProduto().getValor();
+		
 			
 		}else System.out.println("O caixa esta fechado");
 		

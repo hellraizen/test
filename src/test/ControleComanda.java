@@ -1,26 +1,30 @@
 package test;
 
 public class ControleComanda {
-	
-	private RepositorioComanda repositoriComanda;
-	
-	public ControleComanda(){
-		repositoriComanda = new RepositorioComanda();
+
+	private RepositorioComanda repositorioComanda;
+
+	public ControleComanda() {
+		repositorioComanda = new RepositorioComanda();
 	}
 
-	public void realizarPedido(Comanda comanda){
-		
+	public void realizarPedido(Comanda comanda) {
+		repositorioComanda.realizarPedido(comanda);
+
 	}
-	public void alterarPedido(Comanda idComanda){
-		
+
+	public void alterarPedido(Comanda idComanda) {
+		repositorioComanda.alterarPedido(idComanda);
+
 	}
-	public Boolean cancelarPedido(Integer idComanda){
-		return true;
+
+	public Boolean cancelarPedido(Integer idComanda) {
+
+		return repositorioComanda.cancelarPedido(idComanda);
 	}
-	public Boolean finalizarPedido(Pagamentos pagamento){
-		return true;
+
+	public Boolean finalizarPedido(Pagamentos pagamento) {
+		return repositorioComanda.finalizarPedido(pagamento);
 	}
-	
-	
-	
+
 }

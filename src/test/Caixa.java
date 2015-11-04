@@ -4,16 +4,16 @@ import java.util.Date;
 
 public class Caixa {
 
-	private Comanda entrada;
+	private Pagamentos entrada;
 	private Double saida;
 	private Double inicial;
 	private Comanda idComanda;
 	private Funcionario idFuncionario;
-	private Pagamentos totalPago;
+	private Double totalPago;
 	private Date data;
 
-	Caixa(Comanda entrada, Double saida, Double inicial, Comanda idComanda, Funcionario idFuncionario,
-			Pagamentos totalPago, Date data) {
+	Caixa(Pagamentos entrada, Double saida, Double inicial, Comanda idComanda, Funcionario idFuncionario,
+			Double totalPago, Date data) {
 		setEntrada(entrada);
 		setSaida(saida);
 		setInicial(inicial);
@@ -24,17 +24,11 @@ public class Caixa {
 
 	}
 
-	@Override
-	public String toString() {
-		return "Caixa [entrada=" + entrada + ", saida=" + saida + ", inicial=" + inicial + ", idComanda=" + idComanda
-				+ ", idFuncionario=" + idFuncionario + ", totalPago=" + totalPago + ", data=" + data + "]";
-	}
-
-	public Comanda getEntrada() {
+	public Pagamentos getEntrada() {
 		return entrada;
 	}
 
-	public void setEntrada(Comanda entrada) {
+	public void setEntrada(Pagamentos entrada) {
 		this.entrada = entrada;
 	}
 
@@ -70,11 +64,11 @@ public class Caixa {
 		this.idFuncionario = idFuncionario;
 	}
 
-	public Pagamentos getTotalPago() {
+	public Double getTotalPago() {
 		return totalPago;
 	}
 
-	public void setTotalPago(Pagamentos totalPago) {
+	public void setTotalPago(Double totalPago) {
 		this.totalPago = totalPago;
 	}
 
