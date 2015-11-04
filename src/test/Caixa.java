@@ -1,51 +1,89 @@
 package test;
 
-public class Caixa {
-	private Integer idCaixa;
-	private double dinheiroCaixa;
-	private double saldoCaixa;
-	
-	
-	
+import java.util.Date;
 
-	Caixa(Integer idCaixa, double dinheiroCaixa) {
-		setIdCaixa(idCaixa);
-		setDinheiroCaixa(dinheiroCaixa);
+public class Caixa {
+
+	private Comanda entrada;
+	private Double saida;
+	private Double inicial;
+	private Comanda idComanda;
+	private Funcionario idFuncionario;
+	private Pagamentos totalPago;
+	private Date data;
+
+	Caixa(Comanda entrada, Double saida, Double inicial, Comanda idComanda, Funcionario idFuncionario,
+			Pagamentos totalPago, Date data) {
+		setEntrada(entrada);
+		setSaida(saida);
+		setInicial(inicial);
+		setIdComanda(idComanda);
+		setIdFuncionario(idFuncionario);
+		setTotalPago(totalPago);
+		setData(data);
 
 	}
 
 	@Override
 	public String toString() {
-		return "Caixa [idCaixa=" + idCaixa + ", dinheiroCaixa=" + dinheiroCaixa + ", saldoCaixa=" + saldoCaixa
-				+ ", entradaCaixa=" + ", saidaCaixa=" +  "]";
+		return "Caixa [entrada=" + entrada + ", saida=" + saida + ", inicial=" + inicial + ", idComanda=" + idComanda
+				+ ", idFuncionario=" + idFuncionario + ", totalPago=" + totalPago + ", data=" + data + "]";
 	}
 
-	public Integer getIdCaixa() {
-		return idCaixa;
+	public Comanda getEntrada() {
+		return entrada;
 	}
 
-	public void setIdCaixa(Integer idCaixa) {
-		this.idCaixa = idCaixa;
+	public void setEntrada(Comanda entrada) {
+		this.entrada = entrada;
 	}
 
-	public double getDinheiroCaixa() {
-		return dinheiroCaixa;
+	public Double getSaida() {
+		return saida;
 	}
 
-	public void setDinheiroCaixa(double dinheiroCaixa) {
-		this.dinheiroCaixa = dinheiroCaixa;
+	public void setSaida(Double saida) {
+		this.saida = saida;
 	}
 
-	public double getSaldoCaixa() {
-		return saldoCaixa;
+	public Double getInicial() {
+		return inicial;
 	}
 
-	public void setSaldoCaixa(double saldoCaixa) {
-		this.saldoCaixa = saldoCaixa;
+	public void setInicial(Double inicial) {
+		this.inicial = inicial;
 	}
 
+	public Comanda getIdComanda() {
+		return idComanda;
+	}
 
+	public void setIdComanda(Comanda idComanda) {
+		this.idComanda = idComanda;
+	}
 
+	public Funcionario getIdFuncionario() {
+		return idFuncionario;
+	}
 
+	public void setIdFuncionario(Funcionario idFuncionario) {
+		this.idFuncionario = idFuncionario;
+	}
+
+	public Pagamentos getTotalPago() {
+		return totalPago;
+	}
+
+	public void setTotalPago(Pagamentos totalPago) {
+		this.totalPago = totalPago;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
+	}
 
 }

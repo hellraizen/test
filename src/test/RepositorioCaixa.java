@@ -4,21 +4,19 @@ import java.util.ArrayList;
 
 public class RepositorioCaixa {
 
-	private ArrayList<Caixa> arrayEntrada;
+	private ArrayList<Caixa> arrayCaixa;
 	
 	private boolean caixa= false;
-	private double entrada;
-	private double saida;
 	private double totalCaixa;
 
 	public RepositorioCaixa() {
 
 
-		arrayEntrada = new ArrayList<Caixa>();
+		arrayCaixa = new ArrayList<Caixa>();
 	}
 
 	public boolean abrirCaixa(Caixa dinheiroCaixa) {
-		if (dinheiroCaixa.getDinheiroCaixa() > 0 && caixa==false) {
+		if (dinheiroCaixa.getInicial() > 0 && caixa==false) {
 			caixa = true;
 			return true;
 		}
@@ -32,31 +30,30 @@ public class RepositorioCaixa {
 		return true;
 	}
 
-	public void entradaCaixa(Comanda entradaCaixa) {
+	public void entradaCaixa(Caixa entradaCaixa) {
 		if(caixa){
-			entrada= entrada+ entradaCaixa.getValor();
-			entradaCaixa.getCaixa().setSaldoCaixa(entrada);
-			arrayEntrada.add(entradaCaixa.getCaixa());
+			arrayCaixa.add(entradaCaixa);
 			
-		}
+			totalCaixa= totalCaixa + entradaCaixa.getEntrada().getProduto().getValor();
+			
+		}else System.out.println("O caixa esta fechado");
 		
 		
 	}
 
-	public void saidaCaixa(double saidaCaixa) {
+	public void saidaCaixa(Caixa saidaCaixa) {
 		if(caixa){
-			saida = saida + saidaCaixa;
-			//arrayEntrada.add(saidaCaixa);
+		
 		}
 	}
 
 	public ArrayList<Caixa> movimentoDiario() {
-		totalCaixa= entrada-saida;
-		System.out.println(totalCaixa);
-		for (Caixa caixa : arrayEntrada) {
+	
+	
+		for (Caixa caixa : arrayCaixa) {
 			System.out.println(caixa.toString());
 		}
-		return arrayEntrada ;
+		return arrayCaixa ;
 	}
 
 }

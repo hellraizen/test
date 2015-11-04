@@ -18,11 +18,11 @@ public class ControleCaixa {
 		return repositorioCaixa.fecharCaixa();
 	}
 
-	public void entradaCaixa(Comanda entradaCaixa) {
+	public void entradaCaixa(Caixa entradaCaixa) {
 		repositorioCaixa.entradaCaixa(entradaCaixa);
 	}
 
-	public void saidaCaixa(Double saidaCaixa) {
+	public void saidaCaixa(Caixa saidaCaixa) {
 		repositorioCaixa.saidaCaixa(saidaCaixa);
 	}
 

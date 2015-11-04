@@ -1,65 +1,58 @@
 package test;
 
+import java.util.Date;
+
 public class Comanda {
-	
-	private Integer id;
-	private String nome;
-	private double valor;
-	private Caixa caixa;
-	
-	public Caixa getCaixa() {
-		return caixa;
-	}
 
+	private Integer idComanda;
+	private Produto valor;
+	private Produto produto;
+	private Date data;
 
-	public void setCaixa(Caixa caixa) {
-		this.caixa = caixa;
-	}
+	public Comanda(Integer idComanda, Produto valor, Produto produto, Date data) {
 
-
-	public Comanda(Integer id,String nome, double valor){
-		
-		setId(id);
-		setNome(nome);
+		setIdComanda(idComanda);
 		setValor(valor);
-		
-	}
+		setProduto(produto);
+		setData(data);
 
+	}
 
 	@Override
 	public String toString() {
-		return "Comanda [id=" + id + ", nome=" + nome + ", valor=" + valor + ", valorTotal=" +  "]";
+		return "Comanda [idComanda=" + idComanda + ", valor=" + valor + ", produto=" + produto + ", data=" + data + "]";
 	}
 
-
-
-
-	public Integer getId() {
-		return id;
+	public Integer getIdComanda() {
+		return idComanda;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdComanda(Integer idComanda) {
+		this.idComanda = idComanda;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public double getValor() {
+	public Produto getValor() {
 		return valor;
 	}
 
-	public void setValor(double valor) {
+	public void setValor(Produto valor) {
 		this.valor = valor;
 	}
 
-	
+	public Produto getProduto() {
+		return produto;
+	}
 
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
 
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
+	}
 
 }
