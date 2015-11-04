@@ -5,16 +5,24 @@ import java.util.Date;
 public class Comanda {
 
 	private Integer idComanda;
-	private Produto valor;
-	private Produto produto;
+	private Double valor;
+	private String produto;
 	private Date data;
 
-	public Comanda(Integer idComanda, Produto valor, Produto produto, Date data) {
+	public Comanda(Integer idComanda, Double valor, String produto) {
 
 		setIdComanda(idComanda);
 		setValor(valor);
 		setProduto(produto);
-		setData(data);
+		//setData(data);
+
+	}
+	public Comanda( Double valor, String produto) {
+
+		
+		setValor(valor);
+		setProduto(produto);
+		//setData(data);
 
 	}
 
@@ -31,19 +39,19 @@ public class Comanda {
 		this.idComanda = idComanda;
 	}
 
-	public Produto getValor() {
+	public Double getValor() {
 		return valor;
 	}
 
-	public void setValor(Produto valor) {
+	public void setValor(Double valor) {
 		this.valor = valor;
 	}
 
-	public Produto getProduto() {
+	public String getProduto() {
 		return produto;
 	}
 
-	public void setProduto(Produto produto) {
+	public void setProduto(String produto) {
 		this.produto = produto;
 	}
 

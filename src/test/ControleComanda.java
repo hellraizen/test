@@ -23,8 +23,8 @@ public class ControleComanda {
 		return repositorioComanda.cancelarPedido(idComanda);
 	}
 
-	public Boolean finalizarPedido(Pagamentos pagamento) {
-		return repositorioComanda.finalizarPedido(pagamento);
+	public Boolean finalizarPedido(Comanda comanda) {
+		return repositorioComanda.finalizarPedido(comanda);
 	}
 
 }

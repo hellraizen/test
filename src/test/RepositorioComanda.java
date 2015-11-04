@@ -6,10 +6,12 @@ public class RepositorioComanda {
 	private Integer indexComanda;
 	private double totalAPagar;
 	ArrayList<Comanda> arrayComanda;
+	private Pagamentos pagamento;
 
 	public RepositorioComanda() {
 		arrayComanda = new ArrayList<Comanda>();
 		indexComanda=1;
+		pagamento = new Pagamentos();
 	}
 
 	public void realizarPedido(Comanda comanda) {
@@ -27,20 +29,29 @@ public class RepositorioComanda {
 		return true;
 	}
 
-	public Boolean finalizarPedido(Pagamentos pagamento) {
-		if(pagamento.finalizarPedidoPago()){
+	public Boolean finalizarPedido(Comanda comanda) {
+		
+		
+			
+			pagamento.setValorTotal( somaComanda(comanda.getIdComanda()));
+			
+			for (Comanda comanda1 : arrayComanda) {
+				System.out.println(comanda1.toString());
+			}
+			
 			
 			indexComanda++;
 			
+			
+			
 			return true;
-		}
-		return false;
+	
 	}
 
-	public Double somaComanda(Comanda comanda) {
+	public Double somaComanda(Integer comanda) {
 		for (Comanda comanda1 : arrayComanda) {
-			if (comanda.getIdComanda() == comanda1.getIdComanda()) {
-				totalAPagar = totalAPagar + comanda1.getValor().getValor();
+			if (comanda == comanda1.getIdComanda()) {
+				totalAPagar = totalAPagar + comanda1.getValor();
 				return totalAPagar;
 			}
 		}

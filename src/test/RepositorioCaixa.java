@@ -15,10 +15,10 @@ public class RepositorioCaixa {
 		arrayCaixa = new ArrayList<Caixa>();
 	}
 
-	public boolean abrirCaixa(Caixa dinheiroCaixa) {
-		if (dinheiroCaixa.getInicial() > 0 && caixa==false) {
+	public boolean abrirCaixa(Double dinheiroCaixa) {
+		if (dinheiroCaixa > 0 && caixa==false) {
 			caixa = true;
-			totalCaixa=dinheiroCaixa.getInicial();
+			totalCaixa=dinheiroCaixa;
 			return true;
 		}
 		return false;

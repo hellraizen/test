@@ -1,19 +1,30 @@
 package test;
 
-public class Pagamentos  {
-	
+public class Pagamentos {
+
 	private Integer idComanda;
 	private Double valorTotal;
 	private Double totalPago;
-	
-	public Pagamentos(Integer idComanda,Double valorTotal,Double totalPago){
-		
+
+	public Pagamentos() {
+
+	}
+
+	public Pagamentos(Integer idComanda, Double totalPago) {
+
+		setIdComanda(idComanda);
+		setTotalPago(totalPago);
+
+	}
+
+	public Pagamentos(Integer idComanda, Double valorTotal, Double totalPago) {
+
 		setIdComanda(idComanda);
 		setValorTotal(valorTotal);
 		setTotalPago(totalPago);
-		
+
 	}
-	
+
 	public Integer getIdComanda() {
 		return idComanda;
 	}
@@ -21,7 +32,6 @@ public class Pagamentos  {
 	public void setIdComanda(Integer idComanda) {
 		this.idComanda = idComanda;
 	}
-
 
 	public Double getValorTotal() {
 		return valorTotal;
@@ -39,16 +49,13 @@ public class Pagamentos  {
 		this.totalPago = totalPago;
 	}
 
-
-	public Boolean finalizarPedidoPago(){
+	public Boolean finalizarPedidoPago() {
 		Double troco = valorTotal - totalPago;
-			//exibir troco em Joptionpan
-			if(troco >= 0) return true;
+		System.out.println();
+		if (troco >= 0)
+			return true;
 		return false;
-	
+
 	}
-	
-	
-	
-	
+
 }

@@ -4,31 +4,28 @@ import java.util.Date;
 
 public class Caixa {
 
-	private Pagamentos entrada;
+	private Double entrada;
 	private Double saida;
 	private Double inicial;
-	private Comanda idComanda;
-	private Funcionario idFuncionario;
+	private Integer idComanda;
+	private Integer idFuncionario;
 	private Double totalPago;
 	private Date data;
 
-	Caixa(Pagamentos entrada, Double saida, Double inicial, Comanda idComanda, Funcionario idFuncionario,
-			Double totalPago, Date data) {
+	public Caixa(Double entrada, Double saida, Integer idComanda, Integer idFuncionario) {
 		setEntrada(entrada);
 		setSaida(saida);
-		setInicial(inicial);
 		setIdComanda(idComanda);
 		setIdFuncionario(idFuncionario);
-		setTotalPago(totalPago);
-		setData(data);
+		//setData(data);
 
 	}
 
-	public Pagamentos getEntrada() {
+	public Double getEntrada() {
 		return entrada;
 	}
 
-	public void setEntrada(Pagamentos entrada) {
+	public void setEntrada(double entrada) {
 		this.entrada = entrada;
 	}
 
@@ -48,19 +45,19 @@ public class Caixa {
 		this.inicial = inicial;
 	}
 
-	public Comanda getIdComanda() {
+	public Integer getIdComanda() {
 		return idComanda;
 	}
 
-	public void setIdComanda(Comanda idComanda) {
+	public void setIdComanda(Integer idComanda) {
 		this.idComanda = idComanda;
 	}
 
-	public Funcionario getIdFuncionario() {
+	public Integer getIdFuncionario() {
 		return idFuncionario;
 	}
 
-	public void setIdFuncionario(Funcionario idFuncionario) {
+	public void setIdFuncionario(Integer idFuncionario) {
 		this.idFuncionario = idFuncionario;
 	}
 

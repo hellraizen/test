@@ -10,7 +10,7 @@ public class ControleCaixa {
 		repositorioCaixa = new RepositorioCaixa();
 	}
 
-	public boolean abrirCaixa(Caixa dinheiroCaixa) {
+	public boolean abrirCaixa(Double dinheiroCaixa) {
 		return repositorioCaixa.abrirCaixa(dinheiroCaixa);
 	}
 
