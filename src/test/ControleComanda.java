@@ -23,7 +23,7 @@ public class ControleComanda {
 		return repositorioComanda.cancelarPedido(idComanda);
 	}
 
-	public Boolean finalizarPedido(Comanda comanda) {
+	public double finalizarPedido(Integer comanda) {
 		return repositorioComanda.finalizarPedido(comanda);
 	}
 

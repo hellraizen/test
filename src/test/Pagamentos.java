@@ -6,9 +6,6 @@ public class Pagamentos {
 	private Double valorTotal;
 	private Double totalPago;
 
-	public Pagamentos() {
-
-	}
 
 	public Pagamentos(Integer idComanda, Double totalPago) {
 
@@ -49,13 +46,6 @@ public class Pagamentos {
 		this.totalPago = totalPago;
 	}
 
-	public Boolean finalizarPedidoPago() {
-		Double troco = valorTotal - totalPago;
-		System.out.println();
-		if (troco >= 0)
-			return true;
-		return false;
-
-	}
+	
 
 }

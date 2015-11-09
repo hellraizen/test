@@ -20,6 +20,14 @@ public class Caixa {
 		//setData(data);
 
 	}
+	public Caixa(Double entrada, Double saida, Integer idComanda, Integer idFuncionario, Date data) {
+		setEntrada(entrada);
+		setSaida(saida);
+		setIdComanda(idComanda);
+		setIdFuncionario(idFuncionario);
+		setData(data);
+
+	}
 
 	public Double getEntrada() {
 		return entrada;

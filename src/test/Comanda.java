@@ -14,15 +14,22 @@ public class Comanda {
 		setIdComanda(idComanda);
 		setValor(valor);
 		setProduto(produto);
-		//setData(data);
 
 	}
-	public Comanda( Double valor, String produto) {
 
-		
+	public Comanda(Double valor, String produto) {
+
 		setValor(valor);
 		setProduto(produto);
-		//setData(data);
+		// setData(data);
+
+	}
+
+	public Comanda(Double valor, String produto, Date data) {
+
+		setValor(valor);
+		setProduto(produto);
+		setData(data);
 
 	}
 
